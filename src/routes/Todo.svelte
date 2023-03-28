@@ -59,6 +59,8 @@
           display: block;
           width: 50vw;
           font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          background-color: rgb(255, 191, 148);
+          border-radius: 2rem;
      }
      form{
           text-align: center;
