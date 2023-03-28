@@ -22,7 +22,7 @@
      function removeAll(){
           todoList = [];
      }
-
+     $: hasItems = todoList.length;
 </script>
 
 <div class="main">
@@ -40,13 +40,19 @@
                </li>
           {/each}
      </ul>
-     <button on:click={removeDone}> Remove Done</button>
-     <button on:click={removeAll}> Remove All</button>
+     {#if hasItems > 0}
+     <div class="removeButton" >
+          <button on:click={removeDone}> Remove Done</button>
+          <button on:click={removeAll}> Remove All</button>
+     </div>
+     {/if}
+     
 
 </div>
 
 
 <style>
+     
      .main{
           margin: auto;
           padding: 2rem;
@@ -68,6 +74,7 @@
           background-color: rgb(255, 242, 167);
           color: rgb(221, 101, 101);
           font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: 1.7rem;
      }
      .done{
           text-decoration: line-through;
@@ -81,4 +88,8 @@
           background-size: 100% auto;
           cursor: pointer;
      }
+     .removeButton{
+          text-align: center;
+     }
+     
 </style>
