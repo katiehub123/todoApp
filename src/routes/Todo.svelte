@@ -54,7 +54,7 @@
 <style>
      
      .main{
-          margin: auto;
+          margin: 0 auto;
           padding: 2rem;
           display: block;
           width: 50vw;
@@ -93,5 +93,6 @@
      .removeButton{
           text-align: center;
      }
+     
      
 </style>
